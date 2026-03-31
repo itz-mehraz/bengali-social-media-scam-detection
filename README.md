@@ -1,104 +1,108 @@
-# 🛡️ Social Media Scam Detection using Machine Learning
+# Social Media Scam Detection Using Machine Learning
 
-A machine learning-based system to detect scam content on social media platforms using both **Bengali and English datasets**.
-
----
-
-## 📖 Project Overview
-
-With the rapid growth of social media, online scams have increased significantly.
-This project aims to detect scam-related content using machine learning techniques by analyzing text data from multiple sources.
+A machine learning-based thesis project for detecting scam-related job and social media posts using English and Bengali text data.
 
 ---
 
-## 🎯 Objectives
+## Project Overview
 
-* Detect scam messages/posts from social media
-* Support **Bengali + English language detection**
-* Compare multiple machine learning algorithms
-* Improve accuracy using preprocessing and feature engineering
+Online scams are increasing rapidly across job portals and social media platforms. This project proposes a machine learning-based approach to detect scam-related posts by analyzing textual patterns from both a public job-posting dataset and a Facebook-style dataset. The study focuses on cross-domain performance, domain adaptation, and comparative model evaluation.
 
 ---
 
-## 📊 Dataset
+## Research Objectives
 
-* Kaggle Scam Dataset
-* Custom collected **Facebook & Bengali dataset**
-
-⚠️ Note: Only sample data is included due to size/privacy.
-
----
-
-## ⚙️ Technologies Used
-
-* Python
-* Scikit-learn
-* Pandas
-* NumPy
-* Matplotlib
+- Detect scam and non-scam posts using machine learning
+- Analyze the performance of text-based classification models
+- Evaluate whether a model trained on one dataset can generalize to another
+- Improve performance by combining English and Bengali/mixed-language data
+- Compare multiple machine learning algorithms to identify the best-performing model
 
 ---
 
-## 🧠 Machine Learning Models
+## Datasets Used
 
-* Logistic Regression
-* Support Vector Machine (SVM)
-* Random Forest
-* (Optional) Neural Network
+### 1. Main Dataset
+- **Name:** Fake Job Postings Dataset
+- **Size:** 17,880 rows
+- **Target Column:** `fraudulent`
+- **Purpose:** Used as the primary training dataset for baseline modeling
 
----
-
-## 🔄 Project Workflow
-
-1. Data Collection
-2. Data Preprocessing
-3. Feature Extraction (TF-IDF / NLP)
-4. Model Training
-5. Evaluation & Comparison
+### 2. Facebook Dataset
+- **Name:** Facebook Job Post Scam Dataset
+- **Size:** 440 rows
+- **Target Column:** `label`
+- **Purpose:** Used to test domain adaptation and final scam detection performance on social-media-style posts
 
 ---
 
-## 📈 Results
+## Methodology
 
-* Accuracy comparison between models
-* Confusion Matrix
-* Performance metrics
+The project was completed in the following stages:
 
----
-
-## 📁 Project Structure
-
-```
-data/
-notebooks/
-src/
-models/
-results/
-```
+1. Data loading and exploration  
+2. Missing value analysis  
+3. Text preparation and feature engineering  
+4. TF-IDF vectorization  
+5. Baseline Logistic Regression training  
+6. Cross-dataset testing on Facebook posts  
+7. Combined dataset training for adaptation  
+8. Strict unseen Facebook-only testing  
+9. Final comparison of Logistic Regression, SVM, and Random Forest  
 
 ---
 
-## 🚀 How to Run
+## Models Used
 
-```bash
-pip install -r requirements.txt
-python train.py
-```
-
----
-
-## 👨‍🎓 Author
-
-**Mehraz**
-Software Engineering Student
-Digital Entrepreneur & Developer
+- Logistic Regression
+- Support Vector Machine (SVM)
+- Random Forest
 
 ---
 
-## ⭐ Future Improvements
+## Key Findings
 
-* Deep Learning models (LSTM / BERT)
-* Real-time scam detection system
-* Web-based dashboard
+- The baseline Logistic Regression model achieved high accuracy on the main dataset
+- However, the baseline model failed on Facebook-style posts and predicted all posts as non-scam
+- This showed that a model trained only on formal job-post data could not generalize to short social media scam posts
+- After combining both datasets, performance improved significantly
+- In the final unseen Facebook test, both SVM and Random Forest achieved the best performance
 
 ---
+
+## Final Results Summary
+
+| Experiment | Accuracy |
+|---|---:|
+| Baseline Logistic Regression on Main Dataset | 0.9728 |
+| Baseline Model on Facebook Dataset | 0.5000 |
+| Improved Logistic Regression on Combined Dataset | 0.9735 |
+| Final Logistic Regression on Unseen Facebook Test | 0.9659 |
+| Final SVM on Unseen Facebook Test | 1.0000 |
+| Final Random Forest on Unseen Facebook Test | 1.0000 |
+
+---
+
+## Why This Study Matters
+
+This project demonstrates that:
+- dataset domain matters strongly in scam detection
+- models trained on formal job-post data may fail on real social media scam posts
+- including Bengali or mixed-language social media data can significantly improve detection performance
+
+This makes the research more practical for real-world scam detection systems.
+
+---
+
+## Repository Structure
+
+```text id="jwl4r1"
+bengali-social-media-scam-detection/
+│
+├── data/
+├── models/
+├── notebooks/
+├── results/
+├── src/
+├── README.md
+└── requirements.txt
