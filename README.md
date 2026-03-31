@@ -107,44 +107,27 @@ bengali-social-media-scam-detection/
 ├── README.md
 └── requirements.txt
 
-Files Included
-notebooks/
-Social_Media_Scam_Detection.ipynb
-models/
-best_svm_model.pkl
-final_tfidf_vectorizer.pkl
-results/
-final_facebook_test_results.csv
-model_comparison_results.csv
-experiment_summary_results.csv
-Technologies Used
-Python
-Pandas
-NumPy
-Matplotlib
-Seaborn
-Scikit-learn
-Google Colab
-GitHub
-Installation
+## Files Included
 
-Install the required packages using:
+### notebooks/
+- `Social_Media_Scam_Detection.ipynb`
 
-pip install -r requirements.txt
-Author
+### models/
+- `best_svm_model.pkl`
+- `final_tfidf_vectorizer.pkl`
 
-Mehraz
-Software Engineering Student
-Machine Learning Thesis Project
+### results/
+- `final_facebook_test_results.csv`
+- `model_comparison_results.csv`
+- `experiment_summary_results.csv`
 
-Future Work
-Use a larger real-world Bengali scam dataset
-Apply deep learning models such as LSTM or BERT
-Build a real-time scam detection web application
-Extend the system for multilingual scam detection
-Disclaimer
+---
 
-The reported results are based on the datasets and held-out test split used in this study. Perfect accuracy on the final Facebook test should be interpreted within the scope of this dataset only.
+## Technologies Used
 
-
-After updating the README, your repo will already look much more thesis-ready. Then the next step is creating a small `src/` script section so your project looks cleaner than just a notebook.
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
