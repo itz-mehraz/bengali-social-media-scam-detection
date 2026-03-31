@@ -96,7 +96,7 @@ This makes the research more practical for real-world scam detection systems.
 
 ## Repository Structure
 
-```text id="jwl4r1"
+
 bengali-social-media-scam-detection/
 │
 ├── data/
