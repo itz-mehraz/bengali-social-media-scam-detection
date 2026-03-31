@@ -1,0 +1,4 @@
+Model,Accuracy,Precision (Scam),Recall (Scam),F1-Score (Scam)
+Logistic Regression,0.9659090909090909,0.9361702127659575,1.0,0.967032967032967
+SVM,1.0,1.0,1.0,1.0
+Random Forest,1.0,1.0,1.0,1.0

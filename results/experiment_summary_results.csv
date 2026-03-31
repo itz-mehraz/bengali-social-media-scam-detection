@@ -1,0 +1,7 @@
+Experiment,Accuracy
+Baseline Logistic Regression on Main Dataset,0.9728747203579419
+Baseline Model on Facebook Dataset,0.5
+Improved Logistic Regression on Combined Dataset,0.9735262008733624
+Final Logistic Regression on Unseen Facebook Test,0.9659090909090909
+Final SVM on Unseen Facebook Test,1.0
+Final Random Forest on Unseen Facebook Test,1.0
